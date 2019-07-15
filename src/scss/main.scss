@@ -233,7 +233,7 @@ html, body{
     transform: translate(-100%, 0);
     /* transform: translateY(-200%); */
     li{
-      line-height: calc((100vh - 60px) / 6);
+      /*line-height: calc((100vh - 60px) / 6);*/
       display: block;
     }
     padding-left: 0;
