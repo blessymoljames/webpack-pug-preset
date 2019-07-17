@@ -4,13 +4,11 @@
 import './scss/main.scss';
 // import './assets/scripts/demo';
 
+import './scss/combine.scss';
+import './assets/scripts/combine';
+
 $(document).ready(() => {
-
-  "use strict";
-
-
-
   console.log('Ready!');
 
-  require('./assets/scripts/demo');
+  require('./assets/scripts/combine');
 });

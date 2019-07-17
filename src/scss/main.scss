@@ -4,6 +4,8 @@
 // Vendors
 @import './vendors/bootstrap/bootstrap';
 
+@import './combine.scss';
+
 $transparent: transparent;
 
 // Bem example
@@ -131,6 +133,5 @@ $transparent: transparent;
     }
   }
 }
-
 
 
