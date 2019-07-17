@@ -1,0 +1,42 @@
+extends ../layouts/master.pug
+
+block title
+  title My Page - Accordion
+
+block basicSeo
+  meta(name='description' content='Accordion page')
+  meta(name='keywords', content='accordion, page')
+  meta(name='author' content='')
+
+block manifestBrowserconfigFiles
+  link(href='../manifest.json', rel='manifest')
+  meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+
+  //- Desktop page
+  div.wrapper
+    ul#accordion.accordion
+        li.accordion__item.is-open
+            div.accordion__link.js-accordion-link Links #1
+            ul.accordion__submenu.js-accordion-submenu(style="display: block;")
+                li.accordion__submenu-item
+                    a.accordion__submenu-link(href="#") Item #1
+                li.accordion__submenu-item
+                    a.accordion__submenu-link(href="#") Item #2
+
+                li.accordion__submenu-item
+                    a.accordion__submenu-link(href="#") Link #3
+
+        li.accordion__item
+            div.accordion__link.js-accordion-link Links #2
+            ul.accordion__submenu.js-accordion-submenu(style="display: none;")
+                li.accordion__submenu-item
+                    a.accordion__submenu-link(href="#") Link #1
+
+                li.accordion__submenu-item
+                    a.accordion__submenu-link(href="#") Link #2
+
+                li.accordion__submenu-item
+                    a.accordion__submenu-link(href="#") Link #3
+
