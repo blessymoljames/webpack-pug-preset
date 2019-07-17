@@ -1,0 +1,53 @@
+block title
+  title Google
+
+block basicSeo
+  meta(name='description' content='Google page')
+  meta(name='keywords', content='google, page')
+  meta(name='author' content='')
+  link(rel='icon', type='image/jpg', sizes='32x32', href=require('images/favicons/google-icon.jpg'))
+
+block manifestBrowserconfigFiles
+  link(href='../manifest.json', rel='manifest')
+  meta(name='msapplication-config' content='../browserconfig.xml')
+
+block content
+  //- Desktop page
+  section.page
+    div.page__header
+      a.page__header--pg(href= " ") Gmail
+      a.page__header--pg(href= " ") Images
+      a.page__header--pg(href= " ")
+        img.page__header--icon(src= '/assets/images/favicons/apps.png')
+      a.page__header--pg.page__header--account(href= " ") Sign in
+    div.page__search
+      img.page__search--image(src= '/assets/images/favicons/google-logo.png')
+      form(action= '/search' method= GET role='search')
+        center
+          div.page__search--bar
+            input.page__search--type(type= 'text')
+        div.page__button
+          input.page__button--search(value= 'Google Search' type= 'submit')
+          input.page__button--search(value= "I'm Feeling Lucky" type= 'submit')
+    p.page__language Google offered in:
+        a.page__language--l(href=" ") हिन्दी
+        a.page__language--l(href=" ") বাংলা
+        a.page__language--l(href=" ") తెలుగు
+        a.page__language--l(href=" ") मराठी
+        a.page__language--l(href=" ") தமிழ்
+        a.page__language--l(href=" ") ગુજરાત
+        a.page__language--l(href=" ") ಕನ್ನಡ
+        a.page__language--l(href=" ") മലയാളം
+        a.page__language--l(href=" ") ਪੰਜਾਬੀ
+    footer.page__footer
+      div.page__footer--top India
+      div.page__footer
+        span
+          a.page__footer--left(href=" ") Advertising
+          a.page__footer--left(href=" ") Business
+          a.page__footer--left(href=" ") About
+          a.page__footer--left(href=" ") How Search works
+        span.page__footer--right
+          a.page__footer--r(href=" ") Privacy
+          a.page__footer--r(href=" ") Terms
+          a.page__footer--r(href=" ") Settings
