@@ -13,4 +13,119 @@ block manifestBrowserconfigFiles
 
 block content
   //- Desktop page
-  h1 contact page
+  nav.navbar.navbar-expand-md.navbar-dark.bg-fade.fixed-top
+    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation")
+      span.navbar-toggler-icon
+    div#navbarsExampleDefault.collapse.navbar-collapse
+      ul.navbar-nav.mr-auto
+        li.nav-item.active
+          a.nav-link(href="#") Home
+            span.sr-only(current)
+        li.nav-item
+          a.nav-link(href="#") News
+        li.nav-item
+          a.nav-link(href="#") Contact
+        li.nav-item
+          a.nav-link(href="#") About
+
+  div.jumbotron.jumbotron-fluid
+    #demo.carousel.slide(data-ride='carousel')
+      ul.carousel-indicators
+        li.active(data-target='#demo', data-slide-to='0')
+        li(data-target='#demo', data-slide-to='1')
+        li(data-target='#demo', data-slide-to='2')
+      .carousel-inner
+        .carousel-item.active
+          img(src='/assets/images/others/10.jpg', alt='Los Angeles')
+          .carousel-caption
+            h3 Los Angeles
+            p We had such a great time in LA!
+        .carousel-item
+          img(src='/assets/images/others/9.jpg', alt='Chicago')
+          .carousel-caption
+            h3 Chicago
+            p Thank you, Chicago!
+        .carousel-item
+          img(src='/assets/images/others/5.jpg', alt='New York')
+          .carousel-caption
+            h3 New York
+            p We love the Big Apple!
+      a.carousel-control-prev(href='#demo', data-slide='prev')
+        span.carousel-control-prev-icon
+      a.carousel-control-next(href='#demo', data-slide='next')
+        span.carousel-control-next-icon
+  section.module.parallax.parallax-1(data-type="background" data-speed="10")
+    div.parallax-container
+      h1 Motion
+  section.module.content
+    div.parallax-container
+      h2 Lorem Ipsum Dolor
+      p Lorem ipsum dolor...
+  script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
+  script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous")
+
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+  //script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+  //script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js')
+  //script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+
+
+  div.bs-example
+    div#accordionExample.accordion
+      div.card
+        div#headingOne.card-header
+            h2.mb-0
+                button#btnCollapse(class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne") What is HTML?
+                  //i(class="fa fa-plus") What is HTML?
+
+        div#collapseOne.collapse.show(aria-labelledby="headingOne" data-parent="#accordionExample")
+          div.card-body
+            p HTML stands for HyperText Markup Language. HTML is the standard markup language for describing the structure of web pages.
+
+      div.card
+          div#headingTwo.card-header
+            h2.mb-0
+              button#btnCollapse.btn.btn-link.collapsed(type="button" data-toggle="collapse" data-target="#collapseTwo") What is Bootstrap?
+                //i(class="fa fa-plus") What is Bootstrap?
+
+          div#collapseTwo.collapse(aria-labelledby="headingTwo" data-parent="#accordionExample")
+            div.card-body
+              p Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development. It is a collection of CSS and HTML conventions.
+
+      div.card
+        div#headingThree.card-header
+            h2.mb-0
+              button#btnCollapse.btn.btn-link.collapsed(type="button" data-toggle="collapse" data-target="#collapseThree") What is CSS?
+                //i(class="fa fa-plus") What is CSS?
+
+        div#collapseThree.collapse(aria-labelledby="headingThree" data-parent="#accordionExample")
+            div.card-body
+              p CSS stands for Cascading Style Sheet. CSS allows you to specify various style properties for a given HTML element such as colors, backgrounds, fonts etc.
+
+  //link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+  //link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+  //script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  //script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js')
+  //script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+
+  .mymodel
+    h2 Centered Modal Example
+    p
+      | Center the modal vertically and horizontally within the page, with the .modal-dialog-centered class.
+    // Button to Open the Modal
+    button.btn.btn-primary(type='button', data-toggle='modal', data-target='#myModal')
+      | Open modal
+    // The Modal
+    #myModal.modal.fade
+      .modal-dialog.modal-dialog-centered
+        .modal-content
+          // Modal Header
+          .modal-header
+            h4.modal-title Modal Heading
+            button.close(type='button', data-dismiss='modal') &times;
+          // Modal body
+          .modal-body
+            | Modal body..
+          // Modal footer
+          .modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Close
